@@ -5,6 +5,8 @@ const Todo = () => {
     const [tasks, setTasks] = useState([]);
     const [isEditing, setIsEditing] = useState(false);
     const [currentTaskIndex, setCurrentTaskIndex] = useState(null);
+    localStorage.setItem('Todolist', tasks);
+    console.log('Todolist', localStorage.getItem('Todolist'))
 
     const handleChange = (e) => {
         setTask(e.target.value);
@@ -44,7 +46,7 @@ const Todo = () => {
     }
     return (
         <div>
-            <h1>Todo List</h1>
+            {/* <h1>Todo List</h1> */}
             <form>
                 <input type="text" placeholder="Add task" value={task} onChange={handleChange} />
                 <button onClick={addTask}>Add</button>
@@ -57,7 +59,7 @@ const Todo = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {tasks.map((task, index) => (
+                    {JSON.stringify(localStorage.getItem('Todolist')).map((task, index) => (
                         <tr key={index}>
                             <td>{task}</td>
                             <td>
