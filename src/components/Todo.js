@@ -59,7 +59,7 @@ const Todo = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {JSON.stringify(localStorage.getItem('Todolist')).map((task, index) => (
+                    {tasks.map((task, index) => (
                         <tr key={index}>
                             <td>{task}</td>
                             <td>

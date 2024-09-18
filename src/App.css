@@ -1,5 +1,11 @@
 .App {
   text-align: center;
+  margin-left: 5rem;
+}
+.button-container{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
 .App-logo {

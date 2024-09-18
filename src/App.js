@@ -1,13 +1,10 @@
-import React from 'react';
-import Todo from './components/Todo';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <Todo />
-    </div>
-  );
+const App = () => {
+    return (
+        <div>
+            <h1>React App</h1>
+            <p>Welcome :)</p>
+        </div>
+    );
 }
-
 export default App;
